@@ -1,28 +1,33 @@
-# 学习路线
-首先将Diffusion中几个重要的模块学习，包括VAE，CLIP, UNet, DDPM(*), 上述模块均在Stable-Diffusion文件夹中实现，由于DDPM中采用为了加速采用跳步导致效果不好，因此学习了DDIM；其次由于Stable-Diffusion是通过调用预训练模型，为了掌握完整的训练
+# Learning Path
+First, we studied several important modules in Stable-Diffusion, including VAE, CLIP, UNet, and DDPM(*). These modules are all implemented in the Stable-Diffusion folder. Because DDPM uses skipping steps for speedup, resulting in poor performance, we learned DDIM instead. Second, since Stable-Diffusion uses pre-trained models, we needed to understand the complete training process.
 
-# 项目构建思路
-1. 理论：经典DDPM、DDIM、VAE
-2. 应用：使用完整的Diffusion进行推理，获得一些结果
-3. 补全从训练到预测的整个流程
-4. 更可控：ControlNet （Onging）
-5. 更高效的训练、更高级的运行管理、特定领域的数据集(MedMNIST) （Onging）
+# Project Structure
 
-# 项目实现说明
+1. Theory: Classic DDPM, DDIM, VAE
+
+2. Application: Using complete Diffusion for inference to obtain some results
+
+3. Completing the entire process from training to prediction
+
+4. Greater Control: ControlNet (Onging)
+
+5. More efficient training, more advanced runtime management, domain-specific datasets (MedMNIST) (Onging)
+
+# Project Implementation Description
 ## 1. Stable Diffusion （Inference）
 
-【流程图1】
+![https://github.com/TimidZe/diffusion-models-learning/blob/main/IMG/%E6%B5%81%E7%A8%8B%E5%9B%BE1.png]
 
 ### 1.1 内容
 
-（按序号顺序）自/交叉注意力、VAE Encoder/Decoder、CLIP、UNet、Scheduler
+(In order of serial number) Self/Cross Attention、VAE Encoder/Decoder、CLIP、UNet、Scheduler
 
 ### 1.2 Results
-1. 加噪过程
+1. Noising Process
 
-【加噪图2】
+![https://github.com/TimidZe/diffusion-models-learning/blob/main/IMG/%E5%8A%A0%E5%99%AA%E5%9B%BE2.png]
 
-2. 文生图
+2. Txt2Img
 
 Config:
 ```
@@ -31,23 +36,25 @@ uncond_prompt = ""
 do_cfg = True
 cfg_scale = 7
 ```
-【文生图3】
+![https://github.com/TimidZe/diffusion-models-learning/blob/main/IMG/%E6%96%87%E7%94%9F%E5%9B%BE3.png]
 
-3. 图生图
-【result4】
-bty这是我的小猫椰子
+3. Img2Img
+
+![https://github.com/TimidZe/diffusion-models-learning/blob/main/IMG/result4.png]
+bty This is my kitten, Coconut
 
 ### 1.3 Discussion
 
-图生图效果不好的原因可能如下：
-1. The Task Mismatch：Img2Img 不是 Inpainting。该项目实现的是全图重绘。要完美实现“盖毯子”，需要的是 Inpainting (局部重绘)，这需要额外的 Mask输入，而目前不支持 mask 输入。
-2. Stable Diffusion v1.5 原生模型是描述型模型，对“指令型”提示词理解很差，应该描述最终画面状态
+The reasons why img2img has bad results are as follows:
+1. The Task Mismatch: Img2Img is not Inpainting. This project implements full-image repainting. To perfectly implement "covering with a blanket," inpainting (partial repainting) is needed, which requires additional mask input, and mask input is currently not supported.
+
+2. The native model of Stable Diffusion v1.5 is a descriptive model, which has poor understanding of "instruction-type" prompts. It should describe the final image state.
 
 ## 2. Diffusion-Concise （Train & Inference）
 
 ### 2.1 Training Results
 
 
-## 参考资料
+## References
 1. https://github.com/hkproj/pytorch-stable-diffusion
 2. https://github.com/dome272/Diffusion-Models-pytorch
