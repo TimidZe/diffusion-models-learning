@@ -5,3 +5,9 @@
 !.gitignore
 !README.md
 !*.md
+!IMG/
+!IMG/*.jpg
+!IMG/*.jpeg
+!IMG/*.png
+!IMG/*.gif
+!IMG/*.webp

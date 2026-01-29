@@ -115,7 +115,7 @@ def launch():
     args = parser.parse_args()
     args.run_name = "DDPM_conditional"
     args.epochs = 300
-    args.batch_size = 14
+    args.batch_size = 25
     args.image_size = 64
     args.num_classes = 10
     args.dataset_path = r"/home/estar/TZ/AI-L/MY_GM/Diffusion-Models-Train/datasets/cifar10_64/cifar10-64/train"
