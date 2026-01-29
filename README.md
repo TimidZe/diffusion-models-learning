@@ -16,7 +16,7 @@ First, we studied several important modules in Stable-Diffusion, including VAE, 
 # Project Implementation Description
 ## 1. Stable Diffusion （Inference）
 
-![https://github.com/TimidZe/diffusion-models-learning/blob/main/IMG/%E6%B5%81%E7%A8%8B%E5%9B%BE1.png]
+![image](https://github.com/TimidZe/diffusion-models-learning/blob/main/IMG/%E6%B5%81%E7%A8%8B%E5%9B%BE1.png)
 
 ### 1.1 内容
 
@@ -25,7 +25,7 @@ First, we studied several important modules in Stable-Diffusion, including VAE, 
 ### 1.2 Results
 1. Noising Process
 
-![https://github.com/TimidZe/diffusion-models-learning/blob/main/IMG/%E5%8A%A0%E5%99%AA%E5%9B%BE2.png]
+![image](https://github.com/TimidZe/diffusion-models-learning/blob/main/IMG/%E5%8A%A0%E5%99%AA%E5%9B%BE2.png)
 
 2. Txt2Img
 
@@ -36,11 +36,11 @@ uncond_prompt = ""
 do_cfg = True
 cfg_scale = 7
 ```
-![https://github.com/TimidZe/diffusion-models-learning/blob/main/IMG/%E6%96%87%E7%94%9F%E5%9B%BE3.png]
+![image](https://github.com/TimidZe/diffusion-models-learning/blob/main/IMG/%E6%96%87%E7%94%9F%E5%9B%BE3.png)
 
 3. Img2Img
 
-![https://github.com/TimidZe/diffusion-models-learning/blob/main/IMG/result4.png]
+![image](https://github.com/TimidZe/diffusion-models-learning/blob/main/IMG/result4.png)
 bty This is my kitten, Coconut
 
 ### 1.3 Discussion
