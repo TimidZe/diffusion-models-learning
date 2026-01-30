@@ -67,7 +67,7 @@ Results of the 120th epoch of training
 
 ![image](https://github.com/TimidZe/diffusion-models-learning/blob/main/IMG/generated_result.png)
 
-Inference Result by the ema model trained for xxx epochs 
+Inference Result by the ema model trained for 140 epochs 
 
 
 ## References
