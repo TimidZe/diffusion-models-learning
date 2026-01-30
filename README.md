@@ -41,7 +41,7 @@ cfg_scale = 7
 3. Img2Img
 
 ![image](https://github.com/TimidZe/diffusion-models-learning/blob/main/IMG/result4.png)
-bty This is my kitten, Coconut
+bty This is my kitten, Coconut :)
 
 ### 1.3 Discussion
 
@@ -53,6 +53,21 @@ The reasons why img2img has bad results are as follows:
 ## 2. Diffusion-Concise （Train & Inference）
 
 ### 2.1 Training Results
+
+Training and inference of unconditional and conditional ddpm were performed respectively.
+
+![image](https://github.com/TimidZe/diffusion-models-learning/blob/main/IMG/Training_results5.png)
+
+
+![image](https://github.com/TimidZe/diffusion-models-learning/blob/main/IMG/120_ema.jpg)
+
+Results of the 120th epoch of training
+
+### 2.2 Inference Results
+
+![image](https://github.com/TimidZe/diffusion-models-learning/blob/main/IMG/generated_result.png)
+
+Inference Result by the ema model trained for xxx epochs 
 
 
 ## References
